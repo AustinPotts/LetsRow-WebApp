@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.6.7/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.6.7/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+
+    <!-- <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA4tYQ4FcSuXkAvzzvl1SCqEZLUoDB6EH0",
+            authDomain: "tampa-athletic-club.firebaseapp.com",
+            databaseURL: "https://tampa-athletic-club.firebaseio.com",
+            projectId: "tampa-athletic-club",
+            storageBucket: "tampa-athletic-club.appspot.com",
+            messagingSenderId: "731010712869",
+            appId: "1:731010712869:web:e296407c8db17b77a7c6cc",
+            measurementId: "G-2LTDBMQNRK"
+        };
+
+
+    </script> -->
+    <script src="form.js" defer></script>
+    <title>Let's Row!</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+
+<body>
+    <header class="hero" id="hero">
+        <ul id="ul">
+            <li id="li"><a href="index.html">Home</a></li>
+            <li id="li"><a href="UserProfile.html">Profile</a></li>
+            <li id="li"><a href="contact.asp">Scheduling</a></li>
+            <li id="li"><a href="about.asp">Messages</a></li>
+        </ul>
+        <div class="container spacing">
+            <h1 class="primary-title">Let's Row!</h1>
+            <p>The only rowing app designed to help clubs, athletes & coaches.</p>
+            <a href="#" class="btn" id="btn"></a>
+
+            <div id="formContainer">
+                <input type="email" placeholder=" Email" id="email" />
+                <input type="password" placeholder=" Password" id="password" />
+                <button onclick="signUp()" id="signUp"> Sign Up </button>
+                <button onclick="signIn()" id="signIn"> Sign In </button>
+                <button onclick="signOut()" id="signOut"> Sign Out </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Who can use the app?</h2>
+                <div class="split">
+                    <a href="#" class="featured__item">
+                        <img src="newAthleteRow.jpg" alt="" class="featured__image">
+                        <p class="featured__details"><span class="price">Athletes</span></p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img src="newCoachRow.jpg" alt="" class="featured__image">
+                        <p class="featured__details"><span class="price">Coaches</span></p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img src="clubRow.jpg" alt="" class="featured__image">
+                        <p class="featured__details"><span class="price">Clubs</span></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-products">
+            <div class="container">
+                <h2 class="section-title-product">What we do</h2>
+                <article class="product Club spacing">
+                    <img src="newappmockup.png" alt="" class="product__image">
+                    <h3 class="product__title">Club Management Tool</h3>
+                    <p class="product__description">As a club owner & operator, you have the ability to run the entire
+                        business from your phone. You can manage inventory, view financial statistics, talk to your
+                        members, add verified coaches to your staff & schedules. You can assign coaches to upcoming
+                        sessions that you can also create in the app. You can send out newsletter alerts to your entire
+                        club in just a few seconds. This app is designed to grow your club with ease of use.</p>
+                    <a href=""></a>
+                </article>
+
+                <article class="product Coach spacing">
+                    <img src="newappmockup.png" alt="" class="product__image">
+                    <h3 class="product__title">Coach Schedule Management</h3>
+                    <p class="product__description">As a coach, you will have the ability to manage your upcoming
+                        schedule by viewing details such as the date, time, session type, athletes atending etc. You can
+                        message your athletes directly from the app & notify them when something has changed.</p>
+                    <a href=""></a>
+                </article>
+
+                <article class="product Athlete spacing">
+                    <img src="newappmockup.png" alt="" class="product__image">
+                    <h3 class="product__title">Athlete Sign Up & Scheduling</h3>
+                    <p class="product__description">As an athlete, you have the ability to sign up as a memeber to any
+                        of the clubs we offer, schedule your next session in seconds & talk directly to your coach or
+                        team directly in the app.</p>
+                    <a href=""></a>
+                </article>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+<style>
+    #hero {
+
+        color: white;
+        text-align: center;
+
+        padding: 15em 0;
+        background-image: url(letsrow-bgIG.jpg),
+            radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+        background-size: 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+
+    }
+
+    #btn {
+
+
+        display: inline-block;
+        text-decoration: none;
+        width: 300px;
+        height: 100px;
+        padding: .5em 1.25em;
+        background: url(download-iosapp.png);
+        background-size: cover;
+        color: var(--clr-text, #fff);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        border-radius: .25em;
+        transition:
+            transform 250ms ease-in-out,
+            opacity 175ms linear;
+
+    }
+
+    body {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    #li {
+        display: inline;
+
+        margin-left: 40px;
+    }
+
+    #formContainer {
+        background-color: #e7f9f300;
+
+        width: 25%;
+        margin: 10px auto;
+
+    }
+
+
+
+
+    #email {
+        width: 70%;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid black;
+
+    }
+
+    #password {
+        width: 70%;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid black;
+    }
+
+    #signUp {
+        background-color: rgb(51, 112, 243);
+        color: white;
+        border: none;
+        font-weight: bold;
+        padding: 15px 32px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 20px;
+        margin: 0 auto;
+    }
+
+    #signIn {
+        background-color: rgb(51, 112, 243);
+        color: white;
+        border: none;
+
+        padding: 15px 32px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+
+    }
+
+    #signOut {
+        background-color: rgb(158, 1, 1);
+        color: white;
+        border: none;
+
+        padding: 15px 32px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 12px;
+        margin: 0 auto;
+    }
+
+    button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+
+</html>

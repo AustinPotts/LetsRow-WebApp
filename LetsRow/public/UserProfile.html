@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.7/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA4tYQ4FcSuXkAvzzvl1SCqEZLUoDB6EH0",
+      authDomain: "tampa-athletic-club.firebaseapp.com",
+      databaseURL: "https://tampa-athletic-club.firebaseio.com",
+      projectId: "tampa-athletic-club",
+      storageBucket: "tampa-athletic-club.appspot.com",
+      messagingSenderId: "731010712869",
+      appId: "1:731010712869:web:e296407c8db17b77a7c6cc",
+      measurementId: "G-2LTDBMQNRK"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+
+<link rel="stylesheet" href="main.css" />
+
+
+</head>
+<ul id="ul">
+    <li id="li"><a href="index.html">Home</a></li>
+    <li id="li"><a href="UserProfile.html">Profile</a></li>
+    <li id="li"><a href="contact.asp">Scheduling</a></li>
+    <li id="li"><a href="about.asp">Messages</a></li>
+  </ul>
+<div id="BlackBanner"> </div>
+<body>
+    <script src="form.js"></script>
+    <header class="heroProfile" id="heroProfile">
+        <div class="container spacing">
+            <img src="newAthleteRow.jpg" alt="" class="profile__image" id="profileImage">
+            <p id="userName">Kaitlyn Smith</p>
+            <p id="userBio">Hello! My name is Kaitlyn, I've been rowing for over 10 years starting in college. I prefer the port postion but I'm willing to alternate if needed. Let's row!</p>
+            <a href="#" class="btnMessage" id="btnMessage">Message Me!</a>
+            
+            <div id="header"> </div>
+            
+    
+        
+    
+        </div>
+    </header>
+    
+    <main>
+    
+
+    
+    
+
+    
+    </main>
+    
+    
+    
+    
+    
+    </body>
+
+
+
+
+    <style>
+
+#ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+#li {
+  display: inline;
+  
+  margin-left: 40px;
+}
+
+#btnMessage{
+    
+    
+    
+    
+    width: 80px;
+    height: 50px;
+    padding: .5em 1.25em;
+
+    background-color: #2656f5; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+  
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    border-radius: .25em;
+    transition:
+     transform 250ms ease-in-out, 
+     opacity 175ms linear;
+
+}
+
+#btnMessage:hover,
+#btnMessage:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+ 
+    #BlackBanner{
+        background-color: black;
+        width: 100%;
+        height: 200px;
+        display: block;
+    }
+
+    #profileImage{
+        border-radius: 50%;
+        max-width: 100%;
+        
+        position: absolute;
+        top: 80px;  
+
+        display: block;
+        left: 42%;
+        margin-right: auto;
+        
+        width: 200px;
+        height: auto;
+    }
+
+    #userName {
+        
+        margin-top: -120px;
+
+        text-align: center;
+        font-size: clamp(2.0rem, calc(4vw + 1rem), 3rem );
+        line-height: 1;
+    }
+
+    #userBio{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    #heroProfile {
+    color: rgb(0, 0, 0);
+    text-align: center;
+   
+    padding: 15em 0;
+    background-color: white;
+    background-blend-mode: multiply;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+    </style>
+
+
+
+
+
+    </html>
